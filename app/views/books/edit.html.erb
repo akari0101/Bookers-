@@ -1,3 +1,18 @@
+<h1>Editing Book</h1>
+
+<div class="error-message">
+  <% if @book.errors.any? %>
+  <%= @book.errors.count %> errors detected.
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+  <% end %>
+</div>
+
+
+
 <%= form_with model: @book do |f| %>
 
   <h4>Title</h4>
